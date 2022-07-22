@@ -1,0 +1,23 @@
+{
+  "pages": [
+    "pages/home-index/home",
+    "pages/home-video/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/home-index/home",
+      "text": "音乐"
+    },{
+      "pagePath": "pages/home-video/index",
+      "text": "视频"
+    }]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
