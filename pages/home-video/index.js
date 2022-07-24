@@ -12,10 +12,14 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad(options) {
-    getTopMV(0).then(res =>{
-      this.setData({topMvs:res.data.data})
-    })
+  // onLoad(options) {
+  //   getTopMV(0).then(res =>{
+  //     this.setData({topMvs:res.data})
+  //   })
+  // },
+  onLoad: async function(options){
+    const res = await getTopMV(0) 
+    this.setData({topMvs:res.data})
   },
 
   /**

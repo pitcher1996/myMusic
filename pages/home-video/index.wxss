@@ -1,1 +1,27 @@
 /* pages/home-video/index.wxss */
+.video {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.video .item {
+  width: 45%;
+}
+.video .item .ablub {
+  width: 100%;
+  position: relative;
+}
+.video .item .ablub image {
+  width: 170px;
+}
+.video .item .ablub .info {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 10px;
+  color: white;
+  top: 80%;
+}

@@ -1,5 +1,17 @@
+<wxs src="../../utils/format.wxs" module="format"></wxs>
 <view class="video">
   <block wx:for="{{topMvs}}" wx:key="id">
-    <view>{{item.name}}</view>
+    <view class="item">
+      <view class="ablub">
+        <image src="{{item.cover}}" alt="" mode="widthFix"/>
+        <view class="info">
+          <view class="playNum"><van-icon name="video-o"/>{{format.forMatCount(item.playCount)}}</view>
+          <view class="playCount">{{format.forToTime(item.mv.videos[0].duration)}}</view>
+        </view>
+      </view>
+      <view class="itemIntroduce">
+        {{item.name}} - {{item.artistName}}
+      </view>
+    </view>
   </block>
 </view>
