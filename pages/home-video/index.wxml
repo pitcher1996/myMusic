@@ -1,7 +1,7 @@
 <wxs src="../../utils/format.wxs" module="format"></wxs>
 <view class="video">
-  <block wx:for="{{topMvs}}" wx:key="id">
-    <view class="item">
+  <view class="allItem" wx:for="{{topMvs}}" wx:key="id">
+    <!-- <view class="item">
       <view class="ablub">
         <image src="{{item.cover}}" alt="" mode="widthFix"/>
         <view class="info">
@@ -12,6 +12,7 @@
       <view class="itemIntroduce">
         {{item.name}} - {{item.artistName}}
       </view>
-    </view>
-  </block>
+    </view> -->
+    <video-item item="{{item}}"></video-item>
+  </view>
 </view>

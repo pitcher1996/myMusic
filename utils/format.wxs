@@ -1,0 +1,27 @@
+function forMatCount(number){
+  var counter = parseInt(number)
+  if(counter > 100000000){
+    return (counter/100000000).toFixed(1) + "亿"
+  }else if(counter > 10000){
+    return (counter/10000).toFixed(1) + "万"
+  }else{
+    return counter + ""
+  }
+}
+
+function totransNumer(number){
+  number = number + ""
+  return ("00" + number).slice(number.length)
+}
+
+function forToTime(timer){
+  var timer = timer / 1000
+  var minute = Math.floor(timer/60)
+  var second = Math.floor(timer%60)
+  return totransNumer(minute) + ":" + totransNumer(second)
+}
+
+module.exports = {
+  forMatCount:forMatCount,
+  forToTime: forToTime
+}

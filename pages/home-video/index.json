@@ -1,7 +1,8 @@
 
 {
   "usingComponents": {
-    "van-icon": "@vant/weapp/icon/index"
+    "van-icon": "@vant/weapp/icon/index",
+    "video-item":"../../components/video-item/index"
   }
-  }
+}
   
