@@ -1,5 +1,7 @@
 
 {
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle":"dark",
   "usingComponents": {
     "van-icon": "@vant/weapp/icon/index",
     "video-item":"../../components/video-item/index"

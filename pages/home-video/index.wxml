@@ -1,4 +1,4 @@
-<wxs src="../../utils/format.wxs" module="format"></wxs>
+
 <view class="video">
   <view class="allItem" wx:for="{{topMvs}}" wx:key="id">
     <!-- <view class="item">
@@ -13,6 +13,6 @@
         {{item.name}} - {{item.artistName}}
       </view>
     </view> -->
-    <video-item item="{{item}}"></video-item>
+    <video-item item="{{item}}" bindtap="videoItemClick" data-item="{{item}}"></video-item>
   </view>
 </view>
