@@ -1,0 +1,25 @@
+{
+  "name": "mymusic",
+  "version": "1.0.0",
+  "description": "uniapp小程序",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pitcher1996/myMusic.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pitcher1996/myMusic/issues"
+  },
+  "homepage": "https://github.com/pitcher1996/myMusic#readme",
+  "dependencies": {
+    "@vant/weapp": "^1.10.4",
+    "hy-event-store": "^1.2.1",
+    "miniprogram-sm-crypto": "^0.3.10"
+  }
+}

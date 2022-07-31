@@ -1,3 +1,21 @@
 <!--pages/home-index/home.wxml-->
-<text>222</text>
-<van-button type="primary">按钮</van-button>
+<van-search placeholder="搜索您喜欢的歌曲" background="#fafafa" bind:click-input="lookUpMusic"/>
+<swiper class="swiper" indicator-dots autoplay circular style="height: {{swiperHeight}}px;">
+        <block wx:for="{{banner}}" wx:key="encodeId">
+          <swiper-item class="swiper-item">
+            <image id="banner-image" src="{{item.imageUrl}}" alt="" mode="widthFix" bindload="watchImageLoad"/>
+          </swiper-item>
+        </block>
+      </swiper>
+      <view class="recommend-song">
+        <area-header title="推荐歌曲"></area-header>
+        <view class="song-list">
+          <block wx:for="{{recommendSong}}" wx:key="item.id">
+            <view>{{item.name}}</view>
+          </block>
+        </view>
+      </view>
+      
+
+
+

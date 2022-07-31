@@ -1,0 +1,6 @@
+<!--pages/video-detail.wxml-->
+<video class="video" src="{{urlData.url}}" referrer-policy="origin" autoplay loop></video>
+
+<block class="message" wx:for="{{100}}" wx:key="*this">
+  <view>列表数据{{item}}</view>
+</block>

@@ -2,14 +2,16 @@
   "pages": [
     "pages/home-index/home",
     "pages/home-video/index",
-    "pages/video-detail/video-detail"
+    "pages/video-detail/video-detail",
+    "pages/search-detail/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Weixin",
     "navigationBarTextStyle": "black",
-    "enablePullDownRefresh": true
+    "enablePullDownRefresh": true,
+    "style": "v2"
   },
   "tabBar": {
     "list": [

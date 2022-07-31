@@ -1,1 +1,23 @@
 /* pages/home-index/home.wxss */
+page{
+  background-color: #fafafa;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+.swiper{
+  border-radius: 10rpx;
+  overflow: hidden;
+  transform: translateY(0);
+}
+.van-search{
+  padding: 10px 0px !important;
+}
+.van-search__content{
+  background-color: #fff !important;
+}
+.swiper-item{
+  display: flex;
+}
+image{
+  width: 100%;
+}
