@@ -1,0 +1,7 @@
+<view class="good-songList">
+  <scroll-view scroll-x class="scroll">
+    <block wx:for="{{6}}">
+      <view class="list-item">{{item}}</view>
+    </block>
+  </scroll-view>
+</view>

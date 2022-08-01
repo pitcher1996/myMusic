@@ -14,13 +14,19 @@
     "style": "v2"
   },
   "tabBar": {
+    "selectedColor": "#d81e06",
+    "color": "black",
     "list": [
       {
         "pagePath": "pages/home-index/home",
+        "iconPath": "icons/音乐 (1).png",
+        "selectedIconPath": "icons/音乐.png",
         "text": "音乐"
       },
       {
         "pagePath": "pages/home-video/index",
+        "iconPath": "icons/视频.png",
+        "selectedIconPath": "icons/视频 (1).png",
         "text": "视频"
       }
     ]
