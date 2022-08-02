@@ -11,8 +11,6 @@
   vertical-align: top;
   display: inline-block;
   width:200rpx;
-  height: 200rpx;
-  background-color:pink;
   margin-left: 20rpx;
 }
 .list-item:last-of-type{

@@ -20,7 +20,12 @@
       <!-- 热门歌单 -->
       <view class="song-list">
         <area-header title="热门歌单"></area-header>
-          <song-list></song-list>
+          <song-list playlists="{{playlists}}"></song-list>
+      </view>
+      <!-- 推荐歌单 -->
+      <view class="song-list">
+        <area-header title="推荐歌单"></area-header>
+          <song-list playlists="{{tuijianlist}}"></song-list>
       </view>
       
 

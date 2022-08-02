@@ -1,12 +1,12 @@
-// components/song-list/index.js
+// components/song-list-item/index.js
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-    playlists:{
-      type:Array,
-      value:[],
+    item:{
+      type:Object,
+      value:{},
     }
   },
 

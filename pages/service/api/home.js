@@ -7,3 +7,7 @@ export function getBanner(params) {
 export function getHotList(){
   return myrequest.get("/top/list")
 }
+//热门歌单数据
+export function getHotMenu(params){
+  return myrequest.get("/top/playlist",params)
+}

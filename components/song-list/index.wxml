@@ -1,7 +1,9 @@
 <view class="good-songList">
   <scroll-view scroll-x class="scroll">
-    <block wx:for="{{6}}">
-      <view class="list-item">{{item}}</view>
+    <block wx:for="{{playlists}}" wx:key="id">
+      <view class="list-item">
+        <song-list-item item="{{item}}"></song-list-item>
+      </view>
     </block>
   </scroll-view>
 </view>

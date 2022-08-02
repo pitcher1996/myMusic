@@ -1,7 +1,7 @@
 // pages/home-index/home.js
 import {rankingStore} from '../../store/hot-store'
 
-import { getBanner } from '../service/api/home'
+import { getBanner ,getHotMenu} from '../service/api/home'
 import { queryRect } from '../../utils/query-rect'
 import throttle from '../../utils/debounce'
 const throttleImage = throttle(queryRect,100)
@@ -14,6 +14,8 @@ Page({
     banner:[],
     swiperHeight:0,
     recommendSong:[],
+    playlists:[],
+    tuijianlist:[]
   },
 
   /**
@@ -35,6 +37,22 @@ Page({
     getBanner().then(res => {
       //小程序中setdata是同步的，react中setstate是异步的
       this.setData({banner:res.banners})
+    })
+    let params = {
+      limit:6,
+      order:'hot',
+    }
+    getHotMenu(params).then(res =>{
+      this.setData({playlists:res.playlists})
+    })
+    let param={
+      limit:6,
+      order:'hot',
+      cat:"华语"
+    }
+    getHotMenu(param).then(res =>{
+      
+      this.setData({tuijianlist:res.playlists})
     })
   },
   //image组件创建后的监听
