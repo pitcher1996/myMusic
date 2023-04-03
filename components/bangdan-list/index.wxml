@@ -1,0 +1,11 @@
+<view class="bangdan-list">
+  <view class="left">
+    <view class="title">{{item.name}}</view>
+      <block wx:for="{{item.tracks}}">
+        <view>{{index+1}}-{{item.first}}-{{item.second}}</view>
+      </block>
+  </view>
+  <view class="right">
+    <image src="{{item.coverImgUrl}}" mode="widthFix"></image>
+  </view>
+</view>

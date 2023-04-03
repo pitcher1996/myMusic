@@ -1,0 +1,13 @@
+.bangdan-list{
+  width:100%;
+  display: flex;
+}
+.bangdan-list .left{
+  width:60%;
+  background-color: #C0C0C0;
+  height: 285rpx;
+}
+.bangdan-list .right{
+  width:40%;
+  height:300rpx;
+}
