@@ -9,7 +9,7 @@
       </swiper>
       <!-- 推荐歌曲部分 -->
       <view class="recommend-song">
-        <area-header title="推荐歌曲"></area-header>
+        <area-header title="推荐歌曲" bind:click="handMoreClick"></area-header>
         <view class="song-list">
           <block wx:for="{{recommendSong}}" wx:key="item.id">
             <song-item item="{{item}}"></song-item>
@@ -24,9 +24,18 @@
       </view>
       <!-- 推荐歌单 -->
       <view class="song-list">
-        <area-header title="推荐歌单"></area-header>
+        <area-header title="推荐歌单" ></area-header>
           <song-list playlists="{{tuijianlist}}"></song-list>
       </view>
+      <!-- 榜单 -->
+      <view>
+        <area-header title="巅峰榜" isShow="{{false}}"></area-header>
+          <block wx:for="{{bangDanList}}" wx:key="item.id">
+            <bangdan-list item="{{item}}" bindtap="handleRankingItemClick"></bangdan-list>
+          </block>
+      </view>
+      
+      
       
 
 

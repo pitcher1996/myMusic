@@ -1,8 +1,9 @@
 import {HYEventStore} from 'hy-event-store'
-import {getHotList} from '../wycloud/api/myhome'
+import {getHotList,getBangDan} from '../wycloud/api/myhome'
 const rankingStore = new HYEventStore({
   state:{
-    hotRanking:[]
+    hotRanking:[],
+    bangDan:[]
   },
   actions:{
     getHot(ctx){
@@ -12,6 +13,7 @@ const rankingStore = new HYEventStore({
       getHotList(params).then(res => {
         ctx.hotRanking = res.data
       })
+      
     }
   }
 })

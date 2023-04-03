@@ -3,7 +3,7 @@
   <view class="title">{{title}}</view>
   <view class="right">
     <view class="slot"><slot></slot></view>
-    <view class="default" wx:if="{{isShow}}">
+    <view class="default" wx:if="{{isShow}}" bindtap="handleRightClick">
       <text>{{rightText}}</text>
       <van-icon name="arrow" />
     </view>

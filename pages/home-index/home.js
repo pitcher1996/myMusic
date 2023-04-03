@@ -4,6 +4,7 @@ import {rankingStore} from '../../store/hot-store'
 import { getBanner ,getHotMenu} from '../service/api/home'
 import { queryRect } from '../../utils/query-rect'
 import throttle from '../../utils/debounce'
+import {getBangDan} from '../../wycloud/api/myhome'
 const throttleImage = throttle(queryRect,100)
 Page({
   
@@ -15,7 +16,8 @@ Page({
     swiperHeight:0,
     recommendSong:[],
     playlists:[],
-    tuijianlist:[]
+    tuijianlist:[],
+    bangDanList:[],
   },
 
   /**
@@ -32,6 +34,8 @@ Page({
       this.setData({recommendSong})
       console.log(recommendSong,'333');
     })
+    //获取榜单数据
+    this.getBangdan()
   },
   getBanner(){
     getBanner().then(res => {
@@ -51,9 +55,13 @@ Page({
       cat:"华语"
     }
     getHotMenu(param).then(res =>{
-      
       this.setData({tuijianlist:res.playlists})
     })
+  },
+  getBangdan(){
+    getBangDan().then(res => {
+      this.setData({bangDanList:res.list.slice(0,4)})
+    }) 
   },
   //image组件创建后的监听
   watchImageLoad(){
@@ -66,6 +74,17 @@ Page({
     console.log('111');
     wx.navigateTo({
       url: '/pages/search-detail/index',
+    })
+  },
+
+  handMoreClick(){
+    wx.navigateTo({
+      url: '/pages/song-item/index',
+    })
+  },
+  handleRankingItemClick(){
+    wx.navigateTo({
+      url: '/pages/song-item/index',
     })
   },
   /**
